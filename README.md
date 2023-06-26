@@ -2,7 +2,6 @@
 
 + Figma
 Front / Next.js
-Back / Nest.js
 DB: PostgresSQL
 
 - 팀원
