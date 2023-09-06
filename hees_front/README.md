@@ -1,5 +1,7 @@
 
-# npm install
+# npm rinstall react-icons --save
+
+# npm install react-slick slick-carousel
 
 만약 에러 발생시 아래 코드를 입력할 것
 # npm install axios --save

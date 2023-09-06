@@ -1,4 +1,5 @@
 # BigHistory_Research
+#npm install
 
 + Figma
 Front / Next.js

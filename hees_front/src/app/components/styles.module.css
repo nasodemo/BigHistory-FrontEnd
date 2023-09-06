@@ -1,0 +1,69 @@
+
+
+.prettyBox {
+    /* background: linear-gradient(120deg, #3f8768 0%, #65d4a0 100%); */
+    background-color: rgb(248, 255, 248);
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(43, 43, 43, 0.7);
+    width: 90%;
+    min-height: '500px';
+    font-size: 9pt;
+    border-radius: 5pt;
+    min-height: 120px;
+  }
+
+.roundBox {
+  /* background: linear-gradient(120deg, #3f8768 0%, #65d4a0 100%); */
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(43, 43, 43, 0.7);
+  width: 100%;
+  min-height: 500px;
+  border-radius: 25px;
+  font-size: 9pt;
+  height: 120px;
+
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  padding: 1re
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+}
+
+.navList li {
+  margin-right: 1rem;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: lightgray;
+}
+
+.addquestion {
+  background: linear-gradient(120deg, #ffffff 0%, #ffffff 100%);
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(43, 43, 43, 0.7);
+  justify-content: center;
+}
+
+.dropbox {
+  width: 150px;
+  left: 10px;
+  padding-left: 30px;
+  border-radius: 0px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 30%;
+  top: 100%;
+}
