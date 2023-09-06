@@ -6,6 +6,7 @@ import Carousel from './Carousel';
 import styles from '@/app/(fields)/field.module.css'
 import Link from 'next/link';
 import ShowInputform from '@/app/components/ShowInputform';
+import InputWithCopyButton from '@/app/components/InputWithCopyButton';
 
 const Pageslider: React.FC = () => {
     const [currentSlide, setCurrentSlide] = useState<number>(0);
@@ -54,8 +55,6 @@ const Pageslider: React.FC = () => {
                     Big Questions for 빛
                     </p>  
 
-                    <p style={{fontSize:'9pt'}}>키워드와 관련된 학문융합적 질문을 만들어보세요! </p>
-
                     <br/>
 
                     <Carousel/>
@@ -79,16 +78,45 @@ const Pageslider: React.FC = () => {
                     </div>
                 </div>
                 <div>
-                <ShowInputform></ShowInputform>
-            <Link href={"/addquestion"} style={{textDecoration:'none', color:'black'}}>
-                <div>
-                    <p style={{textDecoration:'none', fontSize:'10pt'}}>
-                    도움이 필요해요
-                    </p>
-                </div>
-            </Link>
+                    <p className={styles.headingLg}>Make Your Own Question</p>
+                    <p style={{fontSize:'10pt'}}>가이드라인에 따라 자신만의 창의적인 질문을 <br/>만들고 해결해보아요</p>
+                    
+                    <p style={{fontSize:'15pt', fontWeight:'bold'}}>관심있는 분야를 선택해보세요</p>
+
+                    <button style={{height:'25px', width:'60px', borderRadius:'35px', border:'none', padding:'0', backgroundColor: 'lightgreen'}}>
+                        <p style={{fontSize:'1pt'}}>자연과학</p>
+                    </button>
+                    &nbsp;
+                    <button style={{height:'25px', width:'60px', borderRadius:'35px', border:'none', padding:'0', backgroundColor: 'lightgreen'}}>
+                        <p style={{fontSize:'1pt'}}>인문학</p>
+                    </button>
+                    &nbsp;
+                    <button style={{height:'25px', width:'60px', borderRadius:'35px', border:'none', padding:'0', backgroundColor: 'lightgreen'}}>
+                        <p style={{fontSize:'1pt'}}>예술체육학</p>
+                    </button>
+                    &nbsp;
+                    <button style={{height:'25px', width:'60px', borderRadius:'35px', border:'none', padding:'0', backgroundColor: 'lightgreen'}}>
+                        <p style={{fontSize:'1pt'}}>교육학</p>
+                    </button>
+
+                    <br/>
+                    <br/>
+
+                    <p style={{fontSize:'15pt', fontWeight:'bold'}}>키워드와 관련한 자신의 경험을 떠올려보세요</p>
+
+                    <p style={{lineHeight:'10'}}>.</p>
+
+                    <InputWithCopyButton></InputWithCopyButton>
+
+
+                    <div style={{lineHeight:'0.5'}}>
+                        <p style={{fontWeight:'bolder', fontSize:'14pt'}}>키워드와 관련된 학문융합적 </p>
+                        <p style={{fontWeight:'bolder', fontSize:'14pt'}}>질문을 만들어보세요 </p>
+                    </div>
             
-            <br />
+                    <ShowInputform></ShowInputform>
+            
+                    <br />
                 </div>
             </Slider>
             

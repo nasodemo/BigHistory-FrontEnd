@@ -6,11 +6,7 @@ import 'slick-carousel/slick/slick.css';
 import Link from 'next/link';
 import styles from '@/app/(fields)/field.module.css'
 import Box from '@/app/components/box';
-import { TbBoxPadding } from 'react-icons/tb';
 
-interface carousel {
-    children: any; 
-  }
 
 
 const Carousel =()=>{
@@ -20,7 +16,7 @@ const Carousel =()=>{
         speed:1000,
     }
     return(
-        <div className="carousel" style={{width:'300px', padding:'5px'}}>
+        <div className="carousel" style={{width:'100%', paddingLeft:'25px'}}>
             <Slider{...settings}>
                 <div>
                     <div>
