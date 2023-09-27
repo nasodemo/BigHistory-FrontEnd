@@ -1,0 +1,40 @@
+.navbar {
+    background: linear-gradient(30deg, rgb(57, 108, 110), rgb(90, 144, 155), rgb(161, 182, 218));
+    height:130px;
+    width: 100%;
+    }
+
+.container {
+    width:100%;
+    }
+
+.iconWithText {
+    display: flex; /* Flexbox를 사용하여 요소를 가로로 배치 */
+    }
+
+.navFlex {
+    display: flex;
+    }
+    
+.navItemLeft {
+    margin-left: 5%;
+    margin-top: 5%;
+    }
+
+.navItemRight {
+    margin-left: 70%;
+    margin-top: 5%;
+    }
+
+.iconWhite {
+    color: white;
+    }
+
+.iconLarge {
+    width: 40px;
+    height: 40px;
+    }
+
+.noTextDecoration {
+    text-decoration: none;
+    }

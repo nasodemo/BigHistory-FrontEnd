@@ -1,0 +1,13 @@
+.Roundbox {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    color:rgb(23, 23, 23);
+    background: linear-gradient(30deg, rgb(255, 190, 190), rgb(255, 208, 193), rgb(255, 235, 176));
+    overflow: hidden; 
+    display: flex;
+    margin: 2px;
+    box-shadow:none;
+    align-items: center;
+    justify-content: center;
+  }
