@@ -1,6 +1,6 @@
 import Searchbar from "./(Searchbar)/Searchbar";
 import styles from './page.module.css';
-import Login from "./(login)/login";
+import Link from "next/link";
 
 
 export default function HomePage() {
@@ -12,15 +12,17 @@ export default function HomePage() {
             <Searchbar />
             <div style={{marginTop:'90%'}}>
                 <div className={styles.bottomcontainer}>
-                <Login>
-                    <p className={styles.normaltext}>로그인</p>
-                </Login>
-                </div>
+                    <div className={styles.loginBox}>
+                        <Link href='/login'>
+                        <p className={styles.normaltext}>로그인</p>
+                        </Link>
+                    </div>
                 <br/>
-                <div className={styles.bottomcontainer}>
-                <Login>
-                    <p className={styles.normaltext}>회원가입</p>
-                </Login>
+                    <div className={styles.loginBox}>
+                        <Link href='/register'>
+                        <p className={styles.normaltext}>회원가입</p>
+                        </Link>
+                    </div>
                 </div>
             </div>
             

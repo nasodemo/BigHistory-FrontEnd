@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import {  AiOutlineClose } from 'react-icons/ai'; 
-import StyledButton from '@/app/(components)/(styledbutton)/styledbutton';
+import { AiOutlineClose } from 'react-icons/ai'; // 추가
+import StyledButton from '../../../../../app/(components)/(styledbutton)/styledbutton';
 import styles from './Inputandsave.module.css'
 
 type InputandsaveProps = {
@@ -44,10 +44,10 @@ const Inputandsave: React.FC<InputandsaveProps> = ({ onSave }) => {
 
   const handleClearClick = () => {
     setInputHistory([]);
-    localStorage.removeItem('inputHistory'); // 추가
+    localStorage.removeItem('inputHistory'); 
   };
 
-  const handleEntryDelete = (id: number) => {
+  const handleEntrydeleteall = (id: number) => {
     const newHistory = inputHistory.filter(entry => entry.id !== id);
     setInputHistory(newHistory);
   };
@@ -60,7 +60,7 @@ const Inputandsave: React.FC<InputandsaveProps> = ({ onSave }) => {
             <StyledButton>
                 {entry.value}
             </StyledButton>
-            <span className={styles.deleteEntryButton} onClick={() => handleEntryDelete(entry.id)}>
+            <span className={styles.deleteallEntryButton} onClick={() => handleEntrydeleteall(entry.id)}>
               <AiOutlineClose size={12} /> 
             </span>
           </div>
@@ -69,6 +69,7 @@ const Inputandsave: React.FC<InputandsaveProps> = ({ onSave }) => {
         {!inputVisible && (
           <div>
             <textarea
+              id='textarea2'
               rows={4}
               value={inputValue}
               onChange={handleInputChange}
@@ -78,6 +79,8 @@ const Inputandsave: React.FC<InputandsaveProps> = ({ onSave }) => {
                 <div>
                 <button 
                     type="button"
+                    title='save'
+                    id='save'
                     onClick={handleSaveClick}
                     className={styles.saveButtonStyle}
                 >
@@ -88,8 +91,10 @@ const Inputandsave: React.FC<InputandsaveProps> = ({ onSave }) => {
                 <div>
                     <button 
                         type="button"
+                        title='deleteall'
+                        id='deleteall'
                         onClick={handleClearClick}
-                        className={styles.deleteButtonStyle}
+                        className={styles.deleteallButtonStyle}
                     >
                     전체 삭제
                     </button>

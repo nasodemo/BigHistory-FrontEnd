@@ -1,5 +1,8 @@
 import data from '../../../../public/data.json'
 import styles from './field.module.css'
+import {GiPlainCircle} from 'react-icons/gi'
+import userdata from '../../../../public/userdata.json'
+import Uploadcommentshow from './(fieldcomponent)/(uploadcomment)/uploadcommentshow'
 
 export default function fieldpage(){
     const descriptions=[
@@ -11,7 +14,13 @@ export default function fieldpage(){
         {title: data.description.naturescience.contents.title6, content: data.description.naturescience.contents.content6},
 
     ]
+
+    const comments=[
+        {username: userdata.user1.username, comment: userdata.user1.comment},
+        {username: userdata.user2.username, comment: userdata.user2.comment}
+    ]
     return (
+        <div>
         <div className={styles.container}>
             <h2 className={styles.header}>{data.description.naturescience.field}</h2>
             {descriptions.map((item, index) => (
@@ -21,6 +30,21 @@ export default function fieldpage(){
                     <br/>
                 </div>
             ))}
+            
+        </div>
+        <hr/>
+        
+        {comments.map((item) => (
+            <div className={styles.commentContainer}>
+                <div className={styles.flexContainer}>
+                    <GiPlainCircle className={styles.icon}/>
+                    &nbsp;
+                    <h3 className={styles.username}>{item.username}</h3>
+                </div>
+                <p>{item.comment}</p>
+            </div>
+        ))}
+        <Uploadcommentshow/>
         </div>
     );
 }

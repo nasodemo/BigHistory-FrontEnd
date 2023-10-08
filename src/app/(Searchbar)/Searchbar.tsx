@@ -26,11 +26,8 @@ const SearchBar = () => {
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (searchQuery === '') {
-      router.push('/word');
-    }
-    if (searchQuery === 'word') {
-      router.push('/${word}');
+    if (searchQuery) {  
+      router.push(`/${searchQuery}`);
     }
     setSearchQuery('');
   };

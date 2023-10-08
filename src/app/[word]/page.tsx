@@ -1,5 +1,4 @@
 import styles from './word.module.css'
-import "public/check.svg"
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 import Pageslider from './components/(pageslider)/pageslider';
 import data from '../../../public/data.json'

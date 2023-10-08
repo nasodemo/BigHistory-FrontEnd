@@ -11,6 +11,7 @@ import Roundbox from '../(roundbox)/roundbox';
 import ShowInputform from '@/app/(components)/(Inputform)/ShowInputform';
 import Inputandsaveshow from '../(Inputandsave)/Inputandsaveshow';
 import data from '../../../../../public/data.json'
+import Quesitons from '../{questions)/questions';
 
 const Pageslider: React.FC = () => {
     const questions=[
@@ -91,14 +92,7 @@ const Pageslider: React.FC = () => {
                 <h2>Big Questions for {data.word}</h2>
                 <p>2개 이상의 학문을 융합하여 선정한 키워드에 대한 질문을 만들어 보세요! 만든 질문에 대한 가능한 답변을 GPT로 생성해드립니다. </p>
                 <br/>
-                {questions.map((item, index) => (
-                  <React.Fragment key={index}>
-                    <StyledButton>
-                      <h5>{item.tag} 융합질문</h5>
-                      <p>{item.question}</p>
-                    </StyledButton>
-                  </React.Fragment>
-                ))}
+                <Quesitons></Quesitons>
                 <p className={styles.smalltext}>위의 질문들을 보면서 나만의 최종 융합질문을 적어봅시다.</p>
                 <ShowInputform></ShowInputform>
               </div>
@@ -109,3 +103,5 @@ const Pageslider: React.FC = () => {
     };
     
     export default Pageslider;
+
+

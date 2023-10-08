@@ -20,7 +20,7 @@
   
   
   .bottomcontainer {
-    display: flex;
+    display: grid;
     justify-content: center;
   }
   
@@ -56,5 +56,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
+
   }
