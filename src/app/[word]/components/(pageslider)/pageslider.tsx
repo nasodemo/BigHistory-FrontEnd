@@ -78,11 +78,8 @@ const Pageslider: React.FC = () => {
                 <h2>나의 융합 질문</h2>
                 <p>8가지 분야의 글을 읽으면서 생긴 궁금증을 바탕으로 나만의 학문융합 질문을 적어보세요. </p>
                 <h4>어떤 학문 분야들과 관련한 질문이 생겼나요?</h4>
-                <Inputandsaveshow></Inputandsaveshow>
-
                 <hr/>
                 <h4>키워드와 관련된 현상에는 무엇이 있나요?</h4>
-                <Inputandsaveshow></Inputandsaveshow>
                 <hr/>
                 <h4>자신이 생각한 질문을 적어주세요.</h4>
                 <Inputandsaveshow></Inputandsaveshow>

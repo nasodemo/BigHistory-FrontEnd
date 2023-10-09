@@ -44,7 +44,7 @@ const Inputandsave: React.FC<InputandsaveProps> = ({ onSave }) => {
 
   const handleClearClick = () => {
     setInputHistory([]);
-    localStorage.removeItem('inputHistory'); // 추가
+    localStorage.removeItem('inputHistory'); 
   };
 
   const handleEntryDelete = (id: number) => {
