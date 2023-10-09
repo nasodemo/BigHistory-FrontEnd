@@ -7,3 +7,5 @@ DB: PostgresSQL
 - 팀원
 김태욱
 조민선
+
+npm i framer-motion

@@ -1,0 +1,17 @@
+{
+    "user1":{
+    "id":1,
+    "username":"nasodemo",
+    "comment":"나도 커피를 마시며 명상해볼까?",
+    "color":"purple"
+    },   
+
+    "user2":{
+    "id":2,
+    "username":"eunbidkim",
+    "comment":"커피가 에너지 음료로 인식된 것이 커피숍의 등장 시기와 거리가 있는 점이 신기하다!",
+    "color":"orange"
+        
+    }
+    
+}
