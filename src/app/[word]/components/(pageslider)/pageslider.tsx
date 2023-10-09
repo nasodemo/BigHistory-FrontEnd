@@ -2,7 +2,8 @@
 
 import React, { useState, useRef } from 'react';
 import Slider from 'react-slick';
-import styles from './pageslider.module.css'
+import styles from './pageslider.module.css';
+
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import Link from 'next/link';
@@ -14,11 +15,6 @@ import data from '../../../../../public/data.json'
 import Quesitons from '../{questions)/questions';
 
 const Pageslider: React.FC = () => {
-    const questions=[
-      {question: data.questions.question1, tag: data.questions.tag1},
-      {question: data.questions.question2, tag: data.questions.tag2}
-    ]
-
     const [currentslide, setcurrentslide] = useState<number>(0);
     const sliderRef = useRef<Slider | null>(null);  // Slider 타입 명시
 
