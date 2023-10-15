@@ -12,9 +12,25 @@ import Roundbox from '../(roundbox)/roundbox';
 import ShowInputform from '@/app/(components)/(Inputform)/ShowInputform';
 import Inputandsaveshow from '../(Inputandsave)/Inputandsaveshow';
 import data from '../../../../../public/data.json'
-import Quesitons from '../{questions)/questions';
+import Quesitons from './{questions)/questions';
+import { usePathname } from 'next/navigation';
 
 const Pageslider: React.FC = () => {
+    const [word, setWord] = useState<string>("");
+    const [count, setCount] = useState<number>(0);
+    const pathname = usePathname();
+
+    const handleSearch = async () => {
+        // 아래의 코드는 뭔가 골치아픈데, 차후 해결해야할 문제임.
+        const path = pathname.split('/')
+        setWord(path[1])
+        // console.log(path[1], 'asdf', word,  '워드가 뭘까용?');
+    };
+
+    if (count == 0) {
+        handleSearch();
+        setCount(1);
+    }
     const [currentslide, setcurrentslide] = useState<number>(0);
     const sliderRef = useRef<Slider | null>(null);  // Slider 타입 명시
 
@@ -50,22 +66,22 @@ const Pageslider: React.FC = () => {
             <Slider {...settings} ref={sliderRef}>
               <div>
                 <h2>&nbsp;8 관점</h2>
-                <p>&nbsp;제시된 8 관점을 통해 {data.word}에 대해 탐구해 보아요. </p>
+                <p>&nbsp;제시된 8 관점을 통해 {word}에 대해 탐구해 보아요. </p>
                 <div className={styles.placecenter}>
                   <div className={styles.flexContainer}>
-                    <Link href='word/education' className={styles.textdeconone}><Roundbox>교육학</Roundbox></Link>
-                    <Link href='word/naturescience' className={styles.textdeconone}><Roundbox>자연과학</Roundbox></Link>
-                    <Link href='word/liberalarts' className={styles.textdeconone}><Roundbox>인문학</Roundbox></Link>
+                    <Link href={`${word}/education`} className={styles.textdeconone}><Roundbox>교육학</Roundbox></Link>
+                    <Link href={`${word}/naturescience`} className={styles.textdeconone}><Roundbox>자연과학</Roundbox></Link>
+                    <Link href={`${word}/liberalarts`} className={styles.textdeconone}><Roundbox>인문학</Roundbox></Link>
                   </div>
                   <div className={styles.flexContainer}>
-                    <Link href='word/socience' className={styles.textdeconone}><Roundbox>사회학</Roundbox></Link>
-                    <Link href='word/' className={styles.textdeconone}><Roundbox>8Sights</Roundbox></Link>
-                    <Link href='word/mechanics' className={styles.textdeconone}><Roundbox>공학</Roundbox></Link>
+                    <Link href={`${word}/socience`} className={styles.textdeconone}><Roundbox>사회학</Roundbox></Link>
+                    <Link href={`${word}/`} className={styles.textdeconone}><Roundbox>8Sights</Roundbox></Link>
+                    <Link href={`${word}/mechanics`} className={styles.textdeconone}><Roundbox>공학</Roundbox></Link>
                   </div>
                   <div className={styles.flexContainer}>
-                    <Link href='word/medicine' className={styles.textdeconone}><Roundbox>의약학</Roundbox></Link>
-                    <Link href='word/art_physical' className={styles.textdeconone}><Roundbox>예술<br/>체육학</Roundbox></Link>
-                    <Link href='word/agriculture_ocean' className={styles.textdeconone}><Roundbox>농수<br/>해양학</Roundbox></Link>
+                    <Link href={`${word}/medicine`} className={styles.textdeconone}><Roundbox>의약학</Roundbox></Link>
+                    <Link href={`${word}/art_physical`} className={styles.textdeconone}><Roundbox>예술<br/>체육학</Roundbox></Link>
+                    <Link href={`${word}/agriculture_ocean`} className={styles.textdeconone}><Roundbox>농수<br/>해양학</Roundbox></Link>
                   </div>
                 </div>
                 
