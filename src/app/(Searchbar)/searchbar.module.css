@@ -1,0 +1,48 @@
+.relativePosition {
+    position: relative;
+  }
+  
+  .searchBarForm {
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+  }
+  
+  .submitButton {
+    padding: 9px 13px;
+    background-color: #87ceca;
+    color: yellow;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .searchInput {
+    background-color: #E8E8E8;
+    padding: 8px;
+    border: none;
+    border-radius: 35px;
+    min-width: 200px;
+  }
+  
+  .dropbox {
+    display: grid;
+    width: 200px;
+    min-height: 60px;
+    background-color: #f5f5f5;
+    border-color: black;
+    line-height: 1.5;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    position: absolute;
+    top: 100%; 
+    left: 17%;
+  }
+  
+  .linkStyle {
+    font-size: 10pt;
+    text-decoration: none;
+    color: black;
+  }
