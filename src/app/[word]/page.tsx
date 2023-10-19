@@ -26,7 +26,7 @@ export default function Lightmain() {
             {/* <p className={styles.generalText}>
             &nbsp;{data.summary}
             </p> */}
-            <DataSummery></DataSummery>
+            <DataSummery/>
             {/* 수정 */}
             <hr/>
             <Pageslider></Pageslider>

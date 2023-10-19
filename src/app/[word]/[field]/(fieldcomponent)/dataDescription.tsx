@@ -34,8 +34,8 @@ export default function DataDescription() {
       try {
         // 아래의 코드는 뭔가 골치아픈데, 차후 해결해야할 문제임.
         const path = pathname.split('/')
-        const word = path[1]
-        const catagory = path[2]
+        const word = decodeURI(path[1]);
+        const catagory = decodeURI(path[2]);
         setCatagory(catagory);
         console.log('word :', word, 'catagory :', catagory);
         

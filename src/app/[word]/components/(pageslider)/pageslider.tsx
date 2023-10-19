@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Slider from 'react-slick';
 import styles from './pageslider.module.css';
 
@@ -17,20 +17,19 @@ import { usePathname } from 'next/navigation';
 
 const Pageslider: React.FC = () => {
     const [word, setWord] = useState<string>("");
-    const [count, setCount] = useState<number>(0);
     const pathname = usePathname();
 
     const handleSearch = async () => {
         // 아래의 코드는 뭔가 골치아픈데, 차후 해결해야할 문제임.
         const path = pathname.split('/')
-        setWord(path[1])
+        setWord(decodeURI(path[1]));
         // console.log(path[1], 'asdf', word,  '워드가 뭘까용?');
     };
 
-    if (count == 0) {
-        handleSearch();
-        setCount(1);
-    }
+    useEffect(() => {
+      handleSearch();
+    }, []);
+
     const [currentslide, setcurrentslide] = useState<number>(0);
     const sliderRef = useRef<Slider | null>(null);  // Slider 타입 명시
 
@@ -66,7 +65,7 @@ const Pageslider: React.FC = () => {
             <Slider {...settings} ref={sliderRef}>
               <div>
                 <h2>&nbsp;8 관점</h2>
-                <p>&nbsp;제시된 8 관점을 통해 {word}에 대해 탐구해 보아요. </p>
+                <p>&nbsp;제시된 8 관점을 통해 키워드 '{word}'에 대해 탐구해 보아요. </p>
                 <div className={styles.placecenter}>
                   <div className={styles.flexContainer}>
                     <Link href={`${word}/education`} className={styles.textdeconone}><Roundbox>교육학</Roundbox></Link>
@@ -98,7 +97,7 @@ const Pageslider: React.FC = () => {
                 <br />
               </div>
               <div>
-                <h2>Big Questions for {data.word}</h2>
+                <h2>Big Questions for {word}</h2>
                 <p>2개 이상의 학문을 융합하여 선정한 키워드에 대한 질문을 만들어 보세요! 만든 질문에 대한 가능한 답변을 GPT로 생성해드립니다. </p>
                 <br/>
                 <Quesitons></Quesitons>
