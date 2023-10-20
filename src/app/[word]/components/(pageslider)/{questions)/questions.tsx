@@ -57,9 +57,9 @@ const Quesitons =  () => {
       const server = process.env.NEXT_PUBLIC_SERVER_BASE_URL;
       const instance = '/content/answer';
       const response = await axios.post(server + instance, { word, question });
-      console.log('response :', response.data);
+      // console.log('response :', response.data);
       if (response.data) {
-        console.log('response.data :', response.data);
+        // console.log('response.data :', response.data);
         const index = questions.findIndex((item) => item.question === question);
         const newQuestions = [...questions];
         newQuestions[index].answer = response.data;
@@ -68,7 +68,7 @@ const Quesitons =  () => {
       }
       setMessage(response.data?.message);
     } catch (error: any) {
-      console.error('error 발생 in makeQuesiton')
+      console.error('error 발생 in makeQuesiton') 
       setMessage(error.response?.data.message);
     }
   };
