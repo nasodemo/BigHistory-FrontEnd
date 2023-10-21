@@ -39,7 +39,6 @@ const Quesitons =  () => {
             // console.error(error);
             setMessage(error.response?.data.message);
         }
-    
     };
     
   const makeQuestions = async (question: string) => {

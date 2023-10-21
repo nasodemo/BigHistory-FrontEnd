@@ -100,8 +100,9 @@ const Pageslider: React.FC = () => {
                 <h2>Big Questions for {word}</h2>
                 <p>2개 이상의 학문을 융합하여 선정한 키워드에 대한 질문을 만들어 보세요! 만든 질문에 대한 가능한 답변을 GPT로 생성해드립니다. </p>
                 <br/>
-                <Quesitons></Quesitons>
                 <p className={styles.smalltext}>위의 질문들을 보면서 나만의 최종 융합질문을 적어봅시다.</p>
+                <br/>
+                <Quesitons></Quesitons>
                 <ShowInputform></ShowInputform>
               </div>
             </Slider>
