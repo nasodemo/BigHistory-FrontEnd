@@ -39,9 +39,6 @@ const SearchBar = () => {
   return (
     <div className={styles.relativePosition}>
       <form id="searchbar" onSubmit={handleSearch} className={styles.searchBarForm}>
-        <button id="submitbutton" type="submit" className={styles.submitButton}>
-          #
-        </button>
         &nbsp;
         <input
           id="keyword"
@@ -53,6 +50,9 @@ const SearchBar = () => {
           onClick={handleSearchClick}
           className={styles.searchInput}
         />
+        <button id="submitbutton" type="submit" className={styles.submitButton}>
+          #
+        </button>
       </form>
       
       {showDropbox && (
@@ -60,6 +60,7 @@ const SearchBar = () => {
           <Link href='/light' className={styles.linkStyle}>빛</Link>
         </div>
       )}
+      
     </div>
   );
 };

@@ -5,13 +5,12 @@
   .searchBarForm {
     display: flex;
     align-items: center;
-    padding-left: 5%;
   }
   
   .submitButton {
     padding: 9px 13px;
-    background-color: #87ceca;
-    color: yellow;
+    background-color: #92edd9;
+    color: rgb(255, 255, 210);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -38,7 +37,6 @@
     border-radius: 20px;
     position: absolute;
     top: 100%; 
-    left: 17%;
   }
   
   .linkStyle {

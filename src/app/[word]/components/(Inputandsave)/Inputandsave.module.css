@@ -20,7 +20,7 @@
     font-family: -moz-initial;
     font-size: 9pt;
     height: 100px;
-    width: 300px;
+    width: 80%;
     resize: none;
   }
   
@@ -47,10 +47,14 @@
 
   .placesidetoside {
     display: flex;
-    padding-left: 60%;
+    padding-left: 0;
   }
 
-  
+  .styledbutton{
+    width: 80%;
+    background-color: #afdbd8;
+    border-radius: 20px;
+  }
   .deleteEntryButton {
     position: absolute;
     right: 50px;

@@ -19,21 +19,20 @@ export default function RootLayout({
         <meta charSet="utf-8" />
       </head>
       <body>
-        <div>
+        <div className={styles.maxwidth}>
           <nav className={styles.navbar}>
-            <div className={styles.navFlex}>
-              <div className={styles.navItemLeft}>
+            <div className={styles.inlinenavbar}>
                 <Link aria-label="Home" href="/">
                   <GoHomeFill className={`${styles.iconWhite} ${styles.iconLarge}`} />
                 </Link>
-              </div>
-              <div className={styles.navItemRight}>
+              
+             <p style={{fontSize:'25pt', fontWeight:'bold', lineHeight:'0'}}>OASIS</p>
+             
                 <Link aria-label="about" href="/about" className={styles.noTextDecoration}>
                   <div className={styles.iconWhite}>
                     <TbHelpOctagon className={styles.iconLarge} />
                   </div>
                 </Link>
-              </div>
             </div>
           </nav>
           <main>{children}</main>

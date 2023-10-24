@@ -7,6 +7,13 @@
     margin-top: 1px;
 }
 
+.center{
+    display: grid;
+    justify-content: center;
+}
+.maxwidth{
+    max-width: 650px;
+}
 .headingLg {
     font-size: 20pt;
     margin-left: 2%;
@@ -76,8 +83,15 @@
 }
 
 
-.check {
-    color:cadetblue;
+.redcheck {
+    color:rgb(222, 0, 0);
+    margin-left: 2%;
+    height: 30px;
+    width: 30px;
+}
+
+.bluecheck {
+    color:rgb(63, 158, 161);
     margin-left: 2%;
     height: 30px;
     width: 30px;

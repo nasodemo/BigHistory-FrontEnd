@@ -12,12 +12,18 @@ type InputFormProps = {
 type InputEntry = {
   id: number;
   value: string;
+  sight1: string;
+  sight2: string;
+  sight3: string;
 };
 
 const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
   const [inputVisible, setInputVisible] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [inputHistory, setInputHistory] = useState<InputEntry[]>([]);
+  const [selectedSight1, setSelectedSight1] = useState(''); 
+  const [selectedSight2, setSelectedSight2] = useState('');
+  const [selectedSight3, setSelectedSight3] = useState('');
 
   useEffect(() => {
     const savedHistory = localStorage.getItem('inputHistory');
@@ -42,10 +48,19 @@ const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
     const lastEntry = inputHistory[inputHistory.length - 1];
     const newId = lastEntry ? lastEntry.id + 1 : 1;
 
-    const newInputEntry: InputEntry = { id: newId, value: inputValue };
+    const newInputEntry: InputEntry = { 
+      id: newId,
+      value: inputValue,
+      sight1: selectedSight1, 
+      sight2: selectedSight2,  
+      sight3: selectedSight3
+    };
     setInputHistory([...inputHistory, newInputEntry]);
     setInputVisible(false);
     setInputValue('');
+    setSelectedSight1(''); 
+    setSelectedSight2('');  
+    setSelectedSight3('');  
   };
 
   const handleClearClick = () => {
@@ -59,16 +74,17 @@ const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
   };
 
   return (
-    <div>
+    <div >
       <div>
       {inputHistory.map((entry) => (
         <div className={styles.entryStyle} key={entry.id}>
           <StyledButton>
-            {entry.value}
+            <h5>{`${entry.sight1} / ${entry.sight2} / ${entry.sight3}`}</h5>
+            <p>{`${entry.value}`}</p>
             <span className={styles.deleteEntryButton} onClick={() => handleEntryDelete(entry.id)}>
               <AiOutlineClose size={12} /> 
             </span>
-          </StyledButton>   
+          </StyledButton>     
         </div>
       ))}
 
@@ -81,7 +97,61 @@ const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
         )}
 
         {inputVisible && (
-          <div>
+          <div className={styles.centerItems}>
+            <div className={styles.sidetoside}>
+            <select 
+                name='sight1' 
+                className={styles.select} 
+                required
+                value={selectedSight1}
+                placeholder='학문1'
+                onChange={(e) => setSelectedSight1(e.target.value)}>
+              <option value=''>학문1</option>
+              <option value='공학'>공학</option>
+              <option value='교육학'>교육학</option>
+              <option value='농수해양학'>농수해양학</option>
+              <option value='사회학'>사회학</option>
+              <option value='의약학'>의약학</option>
+              <option value='인문학'>인문학</option>
+              <option value='자연과학'>자연과학</option>
+              <option value='예술체육학'>예술체육학</option>
+            </select>
+            <select 
+                name='sight2' 
+                className={styles.select} 
+                required
+                value={selectedSight2}  
+                onChange={(e) => setSelectedSight2(e.target.value)}
+                > 
+              <option value=''>학문2</option>
+              <option value='공학'>공학</option>
+              <option value='교육학'>교육학</option>
+              <option value='농수해양학'>농수해양학</option>
+              <option value='사회학'>사회학</option>
+              <option value='의약학'>의약학</option>
+              <option value='인문학'>인문학</option>
+              <option value='자연과학'>자연과학</option>
+              <option value='예술체육학'>예술체육학</option>
+            </select>
+            <select 
+                name='sight3' 
+                className={styles.select} 
+                required
+                value={selectedSight3}  
+                onChange={(e) => setSelectedSight3(e.target.value)}
+                >
+              <option value=''>학문3</option>
+              <option value=''>해당없음</option>
+              <option value='공학'>공학</option>
+              <option value='교육학'>교육학</option>
+              <option value='농수해양학'>농수해양학</option>
+              <option value='사회학'>사회학</option>
+              <option value='의약학'>의약학</option>
+              <option value='인문학'>인문학</option>
+              <option value='자연과학'>자연과학</option>
+              <option value='예술체육학'>예술체육학</option>
+            </select>
+            </div>
             <textarea
               id='textarea1'
               title='textarea1'
