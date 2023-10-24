@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation'; 
 import Link from 'next/link';
-import styles from './searchBar.module.css';
+import styles from './searchbar.module.css';
 
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');

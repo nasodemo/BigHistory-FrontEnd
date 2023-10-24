@@ -4,7 +4,7 @@ import Inputandsave from "./uploadcomment";
 import { useState } from "react";
 
 
-const uploadcommentshow = () => {
+const Uploadcommentshow = () => {
     const [savedData, setSavedData] = useState<string>(''); // 'savedData' 타입 지정
   
     const handleSave = (data: string) => { // 'data'의 타입을 'string'으로 지정
@@ -21,4 +21,4 @@ const uploadcommentshow = () => {
     );
   };
   
-  export default uploadcommentshow;
+  export default Uploadcommentshow;

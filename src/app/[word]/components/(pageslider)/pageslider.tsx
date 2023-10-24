@@ -7,7 +7,6 @@ import styles from './pageslider.module.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import Link from 'next/link';
-import StyledButton from '../../../(components)/(styledbutton)/styledbutton'
 import ShowInputform from '@/app/(components)/(Inputform)/ShowInputform';
 import Inputandsaveshow from '../(Inputandsave)/Inputandsaveshow';
 import data from '../../../../../public/data.json'
