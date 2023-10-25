@@ -1,12 +1,8 @@
 .title {
-    padding-top: 10pt;
-    line-height: 1pt;
-    margin-left: 5%;
-    display: grid;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20pt;
+    font-size: 30pt;
     font-weight: 700;
-    color: rgba(4, 17, 36, 0.837);
+    color: rgba(4, 20, 44, 0.837);
   }
   
   .semititle {

@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation'; 
 import Link from 'next/link';
-import styles from './searchBar.module.css';
+import styles from './searchbar.module.css';
 
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -39,9 +39,6 @@ const SearchBar = () => {
   return (
     <div className={styles.relativePosition}>
       <form id="searchbar" onSubmit={handleSearch} className={styles.searchBarForm}>
-        <button id="submitbutton" type="submit" className={styles.submitButton}>
-          #
-        </button>
         &nbsp;
         <input
           id="keyword"
@@ -53,6 +50,9 @@ const SearchBar = () => {
           onClick={handleSearchClick}
           className={styles.searchInput}
         />
+        <button id="submitbutton" type="submit" className={styles.submitButton}>
+          #
+        </button>
       </form>
       
       {showDropbox && (
@@ -60,6 +60,7 @@ const SearchBar = () => {
           <Link href='/light' className={styles.linkStyle}>빛</Link>
         </div>
       )}
+      
     </div>
   );
 };

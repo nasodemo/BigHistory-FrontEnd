@@ -7,27 +7,34 @@ import DataSummery from './components/(datahandle)/dataSummery';
 
 
 export default function Lightmain() {
-
-
+    const check=data.check
     return (
         <div>
             <br/>
+            <div className={styles.center}>
+            <div className={styles.maxwidth}>
             <div className={styles.iconWithText}>
             
-            {/* <h1> */}
-                {/* &nbsp;{data.word} */}
-            {/* </h1> */}
-            <DataWord></DataWord>
+            <h1>
+                &nbsp;&nbsp;{data.word}
+            </h1>
+            {/* <DataWord></DataWord> */}
             {/* 수정 */}
-
-            <BsFillCheckCircleFill className={styles.check}></BsFillCheckCircleFill>
+                        
+            {check ? (
+                    <BsFillCheckCircleFill className={styles.bluecheck} />
+                ) : (
+                    <BsFillCheckCircleFill className={styles.redcheck} />
+                )}
             </div>
 
-            {/* <p className={styles.generalText}>
+            <p className={styles.generalText}>
             &nbsp;{data.summary}
-            </p> */}
-            <DataSummery></DataSummery>
+            </p>
+            {/* <DataSummery></DataSummery> */}
             {/* 수정 */}
+            </div>
+            </div>
             <hr/>
             <Pageslider></Pageslider>
             <br/>
