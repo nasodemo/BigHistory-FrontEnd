@@ -4,8 +4,10 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
+        "build:dev": "cross-env env-cmd -f .env.development next build",
+        "build:production": "cross-env env-cmd -f .env.production next build",
+        "start:dev": "cross-env env-cmd -f .env.development next start",
+        "start:production": "cross-env env-cmd -f .env.production next start",
         "lint": "next lint"
     },
     "dependencies": {
@@ -14,7 +16,9 @@
         "@types/react-dom": "18.2.7",
         "@types/react-slick": "^0.23.10",
         "axios": "^1.5.1",
+        "cross-env": "^7.0.3",
         "dotenv": "^16.3.1",
+        "env-cmd": "^10.1.0",
         "eslint": "8.49.0",
         "eslint-config-next": "13.4.19",
         "next": "^13.5.4",

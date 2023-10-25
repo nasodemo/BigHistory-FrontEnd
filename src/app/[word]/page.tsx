@@ -15,11 +15,7 @@ export default function Lightmain() {
             <div className={styles.maxwidth}>
             <div className={styles.iconWithText}>
             
-            <h1>
-                &nbsp;&nbsp;{data.word}
-            </h1>
-            {/* <DataWord></DataWord> */}
-            {/* 수정 */}
+            <DataWord></DataWord>
                         
             {check ? (
                     <BsFillCheckCircleFill className={styles.bluecheck} />
@@ -28,11 +24,11 @@ export default function Lightmain() {
                 )}
             </div>
 
-            <p className={styles.generalText}>
-            &nbsp;{data.summary}
-            </p>
-            {/* <DataSummery></DataSummery> */}
-            {/* 수정 */}
+            {/* <p className={styles.generalText}> */}
+            {/* &nbsp;{data.summary} */}
+            {/* </p> */}
+            <DataSummery></DataSummery>
+            {/* 수정 for Back */}
             </div>
             </div>
             <hr/>

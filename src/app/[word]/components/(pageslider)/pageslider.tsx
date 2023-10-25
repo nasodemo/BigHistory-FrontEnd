@@ -1,18 +1,30 @@
 "use client"
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Slider from 'react-slick';
 import styles from './pageslider.module.css';
 
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import Link from 'next/link';
-import ShowInputform from '@/app/(components)/(Inputform)/ShowInputform';
+import ShowInputform from '@/app/[word]/components/(pageslider)/(pageslidercomponent)/(Inputform)/ShowInputform';
 import Inputandsaveshow from '../(Inputandsave)/Inputandsaveshow';
 import data from '../../../../../public/data.json'
 import Quesitons from '../{questions)/questions';
+import { usePathname } from 'next/navigation';
 
 const Pageslider: React.FC = () => {
+    const [word, setWord] = useState<string>("");
+    const pathname = usePathname();
+
+    const handleSearch = async () => {
+        const path = pathname.split('/')
+        setWord(decodeURI(path[1]));
+    };
+
+    useEffect(() => {
+      handleSearch();
+    }, []);
     const [currentslide, setcurrentslide] = useState<number>(0);
     const sliderRef = useRef<Slider | null>(null);  // Slider 타입 명시
 
@@ -50,38 +62,38 @@ const Pageslider: React.FC = () => {
                   <div className={styles.padding}>
                   <div className={styles.maxwidth}>
                   <h2>&nbsp;8 관점</h2>
-                  <p>&nbsp;제시된 8 관점을 통해 {data.word}에 대해 탐구해 보아요. </p>
+                  <p>&nbsp;제시된 8 관점을 통해 {word}에 대해 탐구해 보아요. </p>
                   
                   <div className={styles.flexContainer}>
-                    <Link href='word/education' className={styles.textdeconone}>
+                    <Link href={`${word}/education`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.education}`}>교육학</form>
                     </Link>
-                    <Link href='word/naturescience' className={styles.textdeconone}>
+                    <Link href={`${word}/naturescience`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.naturescience}`}>자연과학</form>
                     </Link>
-                    <Link href='word/liberalarts' className={styles.textdeconone}>
+                    <Link href={`${word}/liberalarts`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.liberalarts}`}>인문학</form>
                     </Link>
                   </div>
                   <div className={styles.flexContainer}>
-                    <Link href='word/socience' className={styles.textdeconone}>
+                    <Link href={`${word}/socience`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.socience}`}>사회학</form>
                     </Link>
-                    <Link href='word/' className={styles.textdeconone}>
+                    <Link href={`${word}/`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.centerlogo}`}></form> {/* someOtherClass 는 임의로 설정한 클래스명입니다. 실제로 필요한 클래스명으로 교체해야 합니다. */}
                     </Link>
-                    <Link href='word/mechanics' className={styles.textdeconone}>
+                    <Link href={`${word}/mechanics`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.mechanics}`}>공학</form>
                     </Link>
                   </div>
                   <div className={styles.flexContainer}>
-                    <Link href='word/medicine' className={styles.textdeconone}>
+                    <Link href={`${word}/medicine`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.medicine}`}>의약학</form>
                     </Link>
-                    <Link href='word/art_physical' className={styles.textdeconone}>
+                    <Link href={`${word}/art_physical`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.artPhysical}`}>예술<br/>체육학</form>
                     </Link>
-                    <Link href='word/agriculture_ocean' className={styles.textdeconone}>
+                    <Link href={`${word}/agriculture_ocean`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.agricultureOcean}`}>농수<br/>해양학</form>
                     </Link>
                   </div>
@@ -107,7 +119,7 @@ const Pageslider: React.FC = () => {
               <div>
                 <div className={styles.padding}>
                 <div className={styles.maxwidth}>
-                <h2>Big Questions for {data.word}</h2>
+                <h2>Big Questions for {word}</h2>
                 <p>2개 이상의 학문을 융합하여 선정한 키워드에 대한 질문을 만들어 보세요! 만든 질문에 대한 가능한 답변을 GPT로 생성해드립니다. </p>
                 <br/>
                   
