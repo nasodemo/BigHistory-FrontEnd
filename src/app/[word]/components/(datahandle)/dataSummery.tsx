@@ -8,38 +8,31 @@ export default function DataSummery() {
     const [summery, setsummery] = useState<string | null>(null);
     const [message, setMessage] = useState<string | null>(null);
     const pathname = usePathname();
-    const [count, setCount] = useState<number>(0);
+
     const handleSearch = async () => {
         try {
-            // 아래의 코드는 뭔가 골치아픈데, 차후 해결해야할 문제임.
           const path = pathname.split('/')
-          const word = path[1]
+          const word = decodeURI(path[1]);
           const server = process.env.NEXT_PUBLIC_SERVER_BASE_URL;
           const instance = '/content/summery'; 
           const response = await axios.post(server + instance, { word });
-          console.log('response :', response.data);
+          console.log('summery :', response.data);
           setsummery(response.data.summery);
           setMessage(response.data?.message);
-          const count = 1
         } catch (error: any) {
-            console.error(error);
-            setMessage(error.response.data.message);
-            const count = 1
+            console.error('error 발생 in summery')
         }
-    
     };
 
-    if (count == 0) {
+    useEffect(() => {
+        console.log('summery 작동 시작')
         handleSearch();
-        setCount(1);
-    }
+    }, []);
     // 수정
 
     return (
-      <div>
-        <p className={styles.generalText}>
-        {summery && <p>{summery}</p>}
-        </p>
+      <div className={styles.generalText}>
+        &nbsp;{summery && <p>{summery}</p>}
       </div>
     );
 }

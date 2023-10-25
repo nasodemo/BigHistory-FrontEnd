@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { AiOutlinePlusCircle, AiOutlineClose } from 'react-icons/ai'; // 추가
-import StyledButton from '../(styledbutton)/styledbutton';
+import StyledButton from '../../../../../(components)/(styledbutton)/styledbutton';
 import styles from './Inputform.module.css'
+import axios from 'axios';
 
 type InputFormProps = {
   onSave: (data: string) => void;
@@ -44,18 +45,23 @@ const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
     setInputValue(e.target.value);
   };
 
-  const handleSaveClick = () => {
-    const lastEntry = inputHistory[inputHistory.length - 1];
-    const newId = lastEntry ? lastEntry.id + 1 : 1;
+  const handleSaveClick = async () => {
+    try {
+      console.log('new question을 위한 handleSaveClick 돌아가는중')
+      const path = window.location.pathname.split('/');
+      const word = decodeURI(path[1]);
+      const server = process.env.NEXT_PUBLIC_SERVER_BASE_URL;
+      const instance = '/questionRoutes/makequestions';
+      const tags = [selectedSight1, selectedSight2, selectedSight3];
+      console.log('inputValue :', inputValue);
+      await axios.post(server + instance, { word, question: inputValue, tags: tags });
+      return;
+      // setquestions(response.data.questions);
+    } catch (error: any) {
+        console.error('error 발생 in handleSaveClick function')
+    }
 
-    const newInputEntry: InputEntry = { 
-      id: newId,
-      value: inputValue,
-      sight1: selectedSight1, 
-      sight2: selectedSight2,  
-      sight3: selectedSight3
-    };
-    setInputHistory([...inputHistory, newInputEntry]);
+
     setInputVisible(false);
     setInputValue('');
     setSelectedSight1(''); 
@@ -76,7 +82,7 @@ const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
   return (
     <div >
       <div>
-      {inputHistory.map((entry) => (
+      {/* {inputHistory.map((entry) => (
         <div className={styles.entryStyle} key={entry.id}>
           <StyledButton>
             <h5>{`${entry.sight1} / ${entry.sight2} / ${entry.sight3}`}</h5>
@@ -86,7 +92,7 @@ const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
             </span>
           </StyledButton>     
         </div>
-      ))}
+      ))} */}
 
         {!inputVisible && (
           <div className={styles.centerItems}>
