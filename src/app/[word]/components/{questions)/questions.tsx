@@ -87,7 +87,13 @@ const Quesitons = () => {
       // 수정
   
   const updatePopupPosition = () => { 
-    const top = window.scrollY;
+      let top;
+    
+    if (window.scrollY <175) {
+      top=200;
+    } else {
+      top = window.scrollY;
+    }
     let left;
     
     if (screen.width < 800) {
