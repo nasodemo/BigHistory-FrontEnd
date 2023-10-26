@@ -4,10 +4,10 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build:dev": "cross-env env-cmd -f .env.development next build",
-        "build:production": "cross-env env-cmd -f .env.production next build",
-        "start:dev": "cross-env env-cmd -f .env.development next start",
-        "start:production": "cross-env env-cmd -f .env.production next start",
+        "build:dev": "env-cmd -f .env.development next build",
+        "build:production": "env-cmd -f .env.production next build",
+        "start:dev": "env-cmd -f .env.development next start",
+        "start:production": "env-cmd -f .env.production next start",
         "lint": "next lint"
     },
     "dependencies": {
