@@ -1,6 +1,6 @@
 module.exports = {
     apps: [{
-        name: "snuOASIS_C",
+        name: "snu_OASIS_C",
         script: "npm run start:production",
     }]
 }
