@@ -21,6 +21,9 @@ export default function Home() {
             <h3>03 나만의 융합 질문 만들기</h3>
             <h3>04 ChatGPT 및 사람들의 질문 구경하기</h3>
             <h3>05 나의 최종 질문 입력하고 답변 읽기</h3>
+            <hr/>
+            <h1>Eight Sights</h1>
+            <p>&nbsp;Eight Sights는 한국연구재단이 제시하는 학문 대분류에 기반하여 다음과 같이 구성되어 있습니다.</p>
         </div>
        
         </>
