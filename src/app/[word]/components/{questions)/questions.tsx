@@ -92,7 +92,7 @@ const Quesitons = () => {
     if (window.scrollY <175) {
       top=200;
     } else {
-      top = window.scrollY;
+      top = (window.scrollY - 150);
     }
     let left;
     
