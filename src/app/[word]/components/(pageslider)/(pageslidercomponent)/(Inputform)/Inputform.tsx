@@ -116,7 +116,7 @@ const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
               <option value='공학'>공학</option>
               <option value='교육학'>교육학</option>
               <option value='농수해양학'>농수해양학</option>
-              <option value='사회학'>사회학</option>
+              <option value='사회과과학'>사회과학</option>
               <option value='의약학'>의약학</option>
               <option value='인문학'>인문학</option>
               <option value='자연과학'>자연과학</option>
@@ -133,7 +133,7 @@ const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
               <option value='공학'>공학</option>
               <option value='교육학'>교육학</option>
               <option value='농수해양학'>농수해양학</option>
-              <option value='사회학'>사회학</option>
+              <option value='사회과학'>사회과학</option>
               <option value='의약학'>의약학</option>
               <option value='인문학'>인문학</option>
               <option value='자연과학'>자연과학</option>
@@ -150,7 +150,7 @@ const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
               <option value='공학'>공학</option>
               <option value='교육학'>교육학</option>
               <option value='농수해양학'>농수해양학</option>
-              <option value='사회학'>사회학</option>
+              <option value='사회과과학'>사회과학</option>
               <option value='의약학'>의약학</option>
               <option value='인문학'>인문학</option>
               <option value='자연과학'>자연과학</option>
