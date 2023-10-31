@@ -62,7 +62,7 @@ const Pageslider: React.FC = () => {
                   <div className={styles.padding}>
                   <div className={styles.maxwidth}>
                   <h2>&nbsp;8 관점</h2>
-                  <p>&nbsp;제시된 8 관점을 통해 {data.word}에 대해 탐구해 보아요. </p>
+                  <p>&nbsp;제시된 8 관점을 통해 {word}에 대해 탐구해 보아요. </p>
                    
                   <div className={styles.flexContainer}>
                     <Link href={`${word}/socience`} className={styles.textdeconone}>
