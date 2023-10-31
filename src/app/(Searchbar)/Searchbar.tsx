@@ -54,7 +54,7 @@ const SearchBar = () => {
           #
         </button>
       </form>
-      
+        
       {showDropbox && (
         <div ref={dropdownRef} className={styles.dropbox}>
           <p style={{fontSize:'11px', color:'grey'}}>검증 완료된 예시 키워드가 표시됩니다.</p>
