@@ -47,7 +47,7 @@ const Pageslider: React.FC = () => {
         <>
           <div className={styles.pagesliderWrapper}>
             <div className="bar-navigation">
-              {['8Sights', '질문 만들기', '질문'].map((bar, index) => (
+              {['8Sights', '질문 만들기', '질문 목'].map((bar, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
