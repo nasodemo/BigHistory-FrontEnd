@@ -39,18 +39,44 @@ const Pageslider: React.FC = () => {
 
     const goToSlide = (slideIndex: number) => {
         if (sliderRef && sliderRef.current) {
-            sliderRef.current.slickGoTo(slideIndex);  // 타입 오류과학</form>
+            sliderRef.current.slickGoTo(slideIndex);  // 타입 오류를 방지하기 위한 조건
+        }
+    };
+    return (
+        <>
+            <div className={styles.pagesliderWrapper}>
+            <div className="bar-navigation">
+              {['8Sights', '질문 만들기', '질문'].map((bar, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`${styles.barNavigationButton} ${currentslide === index ? styles.barNavigationButtonActive : styles.barNavigationButtonInactive}`}
+                >
+                  {bar}
+                </button>
+              ))}
+            </div>
+            <Slider {...settings} ref={sliderRef}>
+                <div>
+                  <div className={styles.padding}>
+                  <div className={styles.maxwidth}>
+                  <h2>&nbsp;8 관점</h2>
+                  <p>&nbsp;제시된 8 관점을 통해 {data.word}에 대해 탐구해 보아요. </p>
+                   
+                  <div className={styles.flexContainer}>
+                    <Link href={`${word}/socience`} className={styles.textdeconone}>
+                      <form className={`${styles.clickbox} ${styles.socience}`}>사회과학</form>
                     </Link>
-                    <Link href={`${word}/naturescience`} className={styles.textdeconone}>
-                      <form className={`${styles.clickbox} ${styles.naturescience}`}>자연과학</form>
+                    <Link href={`${word}/education`} className={styles.textdeconone}>
+                      <form className={`${styles.clickbox} ${styles.education}`}>교육학</form>
                     </Link>
                     <Link href={`${word}/liberalarts`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.liberalarts}`}>인문학</form>
                     </Link>
                   </div>
                   <div className={styles.flexContainer}>
-                    <Link href={`${word}/education`} className={styles.textdeconone}>
-                      <form className={`${styles.clickbox} ${styles.education}`}>교육학</form>
+                    <Link href={`${word}/naturescience`} className={styles.textdeconone}>
+                      <form className={`${styles.clickbox} ${styles.naturescience}`}>자연과학</form>
                     </Link>
                     <Link href={`${word}/`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.centerlogo}`}></form> {/* someOtherClass 는 임의로 설정한 클래스명입니다. 실제로 필요한 클래스명으로 교체해야 합니다. */}
@@ -70,7 +96,6 @@ const Pageslider: React.FC = () => {
                       <form className={`${styles.clickbox} ${styles.agricultureOcean}`}>농수<br/>해양학</form>
                     </Link>
                   </div>
-                  
                 </div>  
                 </div>
               </div>
