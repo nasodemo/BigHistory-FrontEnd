@@ -58,7 +58,7 @@ const SearchBar = () => {
       {showDropbox && (
         <div ref={dropdownRef} className={styles.dropbox}>
           <p style={{fontSize:'11px', color:'grey'}}>검증 완료된 예시 키워드가 표시됩니다.</p>
-          <Link href='/빛' className={styles.linkStyle}>빛</Link>
+          <Link href='/지구온난화' className={styles.linkStyle}>지구온난화</Link>
         </div>
       )}
       
