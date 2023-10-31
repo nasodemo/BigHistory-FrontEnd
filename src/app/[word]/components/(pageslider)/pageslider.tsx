@@ -39,14 +39,7 @@ const Pageslider: React.FC = () => {
 
     const goToSlide = (slideIndex: number) => {
         if (sliderRef && sliderRef.current) {
-            sliderRef.current.slickGoTo(slideIndex);  // 타입 오류를 방지하기 위한 조건
-        }
-    };
-    return (
-        <>
-            <div className={styles.pagesliderWrapper}>
-            <div className="bar-navigation">
-              {['8Sights', '질문 만들기', '질문'].map((bar, index) => (
+            sliderRef.current.slickGoTo(slideIndex);  /록'].map((bar, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
