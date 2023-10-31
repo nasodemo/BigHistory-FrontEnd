@@ -65,35 +65,35 @@ const Pageslider: React.FC = () => {
                   <p>&nbsp;제시된 8 관점을 통해 {word}에 대해 탐구해 보아요. </p>
                    
                   <div className={styles.flexContainer}>
-                    <Link href={`${word}/socience`} className={styles.textdeconone}>
+                    <Link href={`${word}/사회과학`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.socience}`}>사회과학</form>
                     </Link>
-                    <Link href={`${word}/education`} className={styles.textdeconone}>
+                    <Link href={`${word}/교육학`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.education}`}>교육학</form>
                     </Link>
-                    <Link href={`${word}/liberalarts`} className={styles.textdeconone}>
+                    <Link href={`${word}/인문학`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.liberalarts}`}>인문학</form>
                     </Link>
                   </div>
                   <div className={styles.flexContainer}>
-                    <Link href={`${word}/naturescience`} className={styles.textdeconone}>
+                    <Link href={`${word}/자연과학`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.naturescience}`}>자연과학</form>
                     </Link>
                     <Link href={`${word}/`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.centerlogo}`}></form> {/* someOtherClass 는 임의로 설정한 클래스명입니다. 실제로 필요한 클래스명으로 교체해야 합니다. */}
                     </Link>
-                    <Link href={`${word}/mechanics`} className={styles.textdeconone}>
+                    <Link href={`${word}/공학`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.mechanics}`}>공학</form>
                     </Link>
                   </div>
                   <div className={styles.flexContainer}>
-                    <Link href={`${word}/medicine`} className={styles.textdeconone}>
+                    <Link href={`${word}/의약학`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.medicine}`}>의약학</form>
                     </Link>
-                    <Link href={`${word}/art_physical`} className={styles.textdeconone}>
+                    <Link href={`${word}/예술체육학`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.artPhysical}`}>예술<br/>체육학</form>
                     </Link>
-                    <Link href={`${word}/agriculture_ocean`} className={styles.textdeconone}>
+                    <Link href={`${word}/농수해양학`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.agricultureOcean}`}>농수<br/>해양학</form>
                     </Link>
                   </div>
