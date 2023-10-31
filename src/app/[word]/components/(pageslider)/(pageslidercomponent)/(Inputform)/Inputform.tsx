@@ -112,7 +112,7 @@ const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
                 value={selectedSight1}
                 placeholder='학문1'
                 onChange={(e) => setSelectedSight1(e.target.value)}>
-              <option value=''>학문1(필수수)</option>
+              <option value=''>학문1(필수)</option>
               <option value='공학'>공학</option>
               <option value='교육학'>교육학</option>
               <option value='농수해양학'>농수해양학</option>
