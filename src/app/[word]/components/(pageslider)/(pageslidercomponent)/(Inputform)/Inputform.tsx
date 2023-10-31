@@ -112,7 +112,7 @@ const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
                 value={selectedSight1}
                 placeholder='학문1'
                 onChange={(e) => setSelectedSight1(e.target.value)}>
-              <option value=''>학문1</option>
+              <option value=''>학문1(필수수)</option>
               <option value='공학'>공학</option>
               <option value='교육학'>교육학</option>
               <option value='농수해양학'>농수해양학</option>
@@ -129,7 +129,7 @@ const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
                 value={selectedSight2}  
                 onChange={(e) => setSelectedSight2(e.target.value)}
                 > 
-              <option value=''>학문2</option>
+              <option value=''>학문2(필수)</option>
               <option value='공학'>공학</option>
               <option value='교육학'>교육학</option>
               <option value='농수해양학'>농수해양학</option>
@@ -146,8 +146,7 @@ const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
                 value={selectedSight3}  
                 onChange={(e) => setSelectedSight3(e.target.value)}
                 >
-              <option value=''>학문3</option>
-              <option value=''>해당없음</option>
+              <option value=''>학문3(선택)</option>
               <option value='공학'>공학</option>
               <option value='교육학'>교육학</option>
               <option value='농수해양학'>농수해양학</option>
