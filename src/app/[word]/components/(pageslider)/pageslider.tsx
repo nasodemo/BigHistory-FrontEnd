@@ -39,34 +39,7 @@ const Pageslider: React.FC = () => {
 
     const goToSlide = (slideIndex: number) => {
         if (sliderRef && sliderRef.current) {
-            sliderRef.current.slickGoTo(slideIndex);  // 타입 오류를 방지하기 위한 조건
-        }
-    };
-
-    return (
-        <>
-          <div className={styles.pagesliderWrapper}>
-            <div className="bar-navigation">
-              {['8Sights', '질문 만들기', '질문 목록'].map((bar, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`${styles.barNavigationButton} ${currentslide === index ? styles.barNavigationButtonActive : styles.barNavigationButtonInactive}`}
-                >
-                  {bar}
-                </button>
-              ))}
-            </div>
-            <Slider {...settings} ref={sliderRef}>
-                <div>
-                  <div className={styles.padding}>
-                  <div className={styles.maxwidth}>
-                  <h2>&nbsp;8 관점</h2>
-                  <p>&nbsp;제시된 8 관점을 통해 {word}에 대해 탐구해 보아요. </p>
-                  
-                  <div className={styles.flexContainer}>
-                    <Link href={`${word}/socience`} className={styles.textdeconone}>
-                      <form className={`${styles.clickbox} ${styles.socience}`}>사회학</form>
+            sliderRef.current.slickGoTo(slideIndex);  // 타입 오류과학</form>
                     </Link>
                     <Link href={`${word}/naturescience`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.naturescience}`}>자연과학</form>
