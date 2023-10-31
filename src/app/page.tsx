@@ -7,8 +7,8 @@ import Image from "next/image";
 export default function HomePage() {
     return (
         <>
-            <div style={{ display:'grid', marginLeft:'15%'}}>
-            <div style={{marginTop:'60px', marginBottom:'30px', height:'50px', display:'flex', position:'relative', placeItems:'center'}}>
+            <div style={{ display:'grid', justifyItems: 'center'}}>
+            <div style={{marginTop:'60px', marginBottom:'15px', height:'50px', display:'flex', position:'relative', placeItems:'center'}}>
                 <p className={styles.title}>OASIS</p>&nbsp;&nbsp;
                 <Image src={'/logo.png'} alt='' width={40} height={40} style={{left:0}}></Image>
             </div>
