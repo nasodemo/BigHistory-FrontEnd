@@ -1,11 +1,11 @@
-import axios from 'axios';
+// import axios from 'axios';
 
-const axiosInstance = axios.create({ 
-  proxy: {
-    protocol: 'https',
-  }
-});
+// const axiosInstance = axios.create({ 
+//   proxy: {
+//     protocol: 'https',
+//   }
+// });
 
-// axiosInstance.defaults.headers.common['Authorization'] = 'FIREBASE AUTH TOKEN';
+// // axiosInstance.defaults.headers.common['Authorization'] = 'FIREBASE AUTH TOKEN';
 
-export default axiosInstance;
+// export default axiosInstance;
