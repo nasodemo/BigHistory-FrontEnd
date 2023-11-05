@@ -80,11 +80,8 @@ const Quesitons = () => {
     const [popupPosition, setPopupPosition] = useState<PopupPosition | null>(null);
     const forceUpdate = useForceUpdate();
     
-    // const questions=[
-      //   {question: data.questions.question1.question, tag: data.questions.question1.tag, answer: data.questions.question1.answer},
-      //   {question: data.questions.question2.question, tag: data.questions.question2.tag, answer: data.questions.question2.answer}
-      // ]
-      // 수정
+
+      
   
   const updatePopupPosition = () => { 
       let top;

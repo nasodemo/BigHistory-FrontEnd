@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "src/app/loading.js", "src/app/loading.js", "src/common/axiosIntance.js"  ],
+, "src/app/loading.js", "src/app/loading.js", "src/common/axiosIntance.js", "src/app/climatechange/climatecomponent/climatepageslider"  ],
   "exclude": [
     "node_modules"
   ]
