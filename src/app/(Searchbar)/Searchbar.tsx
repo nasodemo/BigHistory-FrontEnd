@@ -51,6 +51,7 @@ const SearchBar = () => {
           onClick={handleSearchClick}
           className={styles.searchInput}
         />
+        &nbsp;&nbsp;
         <button id="submitbutton" type="submit" className={styles.submitButton}>
           <div className={styles.search}><FaSearch></FaSearch></div>
         </button>
