@@ -45,7 +45,7 @@ const SearchBar = () => {
           id="keyword"
           name="keyword"
           type="text"
-          placeholder=" Key Word"
+          placeholder=" # Key Word"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           onClick={handleSearchClick}
