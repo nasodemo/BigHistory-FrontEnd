@@ -65,15 +65,16 @@ const Pageslider: React.FC = () => {
                   <p>&nbsp;제시된 8 관점을 통해 {word}에 대해 탐구해 보아요. </p>
                    
                   <div className={styles.flexContainer}>
-                    <Link href={`${word}/사회과학`} className={styles.textdeconone}>
-                      <form className={`${styles.clickbox} ${styles.socience}`}>사회과학</form>
+                    <Link href={`${word}/인문학`} className={styles.textdeconone}>
+                      <form className={`${styles.clickbox} ${styles.liberalarts}`}>인문학</form>
                     </Link>
                     <Link href={`${word}/교육학`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.education}`}>교육학</form>
                     </Link>
-                    <Link href={`${word}/인문학`} className={styles.textdeconone}>
-                      <form className={`${styles.clickbox} ${styles.liberalarts}`}>인문학</form>
+                    <Link href={`${word}/사회과학`} className={styles.textdeconone}>
+                      <form className={`${styles.clickbox} ${styles.socience}`}>사회과학</form>
                     </Link>
+
                   </div>
                   <div className={styles.flexContainer}>
                     <Link href={`${word}/자연과학`} className={styles.textdeconone}>
