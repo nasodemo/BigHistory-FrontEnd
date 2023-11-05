@@ -6,7 +6,7 @@ import Uploadcommentshow from '../../../[word]/[field]/(fieldcomponent)/(uploadc
 
 export default function fieldpage5(){
     const comments=[
-        {username: 'username', comment: data.description.mechanics.comment
+        {username: 'username', comment: data.description.mechanics.comment}
     ]
     const description=[
         {title:data.description.mechanics.contents.title1, content:data.description.mechanics.contents.content1},
