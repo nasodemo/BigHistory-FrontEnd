@@ -13,24 +13,11 @@ export default function HomePage() {
                 <Image src={'/logo.png'} alt='' width={40} height={40} style={{left:0}}></Image>
             </div>
             <Searchbar />
-            <br/>
-            
-            </div>
-            {/* <div style={{marginTop:'90%'}}>
-                <div className={styles.bottomcontainer}>
-                    <div className={styles.loginBox}>
-                        <Link href='/login'>
-                        <p className={styles.normaltext}>로그인</p>
-                        </Link>
-                    </div>
                 <br/>
-                    <div className={styles.loginBox}>
-                        <Link href='/register'>
-                        <p className={styles.normaltext}>회원가입</p>
-                        </Link>
-                    </div>
+                <div style={{marginTop:'300px'}}>
+                    <p style={{fontSize:'11pt',fontFamily:'맑은고딕', color:'gray',  margin:'0'}}>OASIS에서 지적 갈증을 해소하세요!</p>
                 </div>
-            </div> */}
+            </div>
             
         </>
     );
