@@ -16,7 +16,7 @@ export default function fieldpage(){
         <DataDescription/>
         <hr/>
         
-        {comments.map((item, index) => (
+{/*         {comments.map((item, index) => (
             <div className={styles.commentContainer } key={index}>
                 <div className={styles.flexContainer}>
                     <GiPlainCircle className={styles.icon}/>
@@ -25,7 +25,7 @@ export default function fieldpage(){
                 </div>
                 <p>{item.comment}</p>
             </div>
-        ))}
+        ))} */}
         <Uploadcommentshow/>
         </div>
     );
