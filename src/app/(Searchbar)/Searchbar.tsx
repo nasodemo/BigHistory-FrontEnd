@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation'; 
 import Link from 'next/link';
 import styles from './searchbar.module.css';
+import {FaSearch} from 'react-icons/fa';
 
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -51,7 +52,7 @@ const SearchBar = () => {
           className={styles.searchInput}
         />
         <button id="submitbutton" type="submit" className={styles.submitButton}>
-          #
+          <div className={styles.search}><FaSearch></FaSearch></div>
         </button>
       </form>
         
