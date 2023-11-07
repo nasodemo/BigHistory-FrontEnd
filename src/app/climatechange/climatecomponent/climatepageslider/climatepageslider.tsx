@@ -87,13 +87,13 @@ const ClimatePageslider: React.FC = () => {
                     </Link>
                   </div>
                   <div className={styles.flexContainer}>
-                    <Link href={`climatechange/mechanics`} className={styles.textdeconone}>
+                    <Link href={`climatechange/medicine`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.medicine}`}>의약학</form>
                     </Link>
                     <Link href={`climatechange/artphysical`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.artPhysical}`}>예술<br/>체육학</form>
                     </Link>
-                    <Link href={`climatechange/agricultrueocean`} className={styles.textdeconone}>
+                    <Link href={`climatechange/agricultureocean`} className={styles.textdeconone}>
                       <form className={`${styles.clickbox} ${styles.agricultureOcean}`}>농수<br/>해양학</form>
                     </Link>
                   </div>
