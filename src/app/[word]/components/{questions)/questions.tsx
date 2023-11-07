@@ -120,8 +120,8 @@ const Quesitons = () => {
   return (
     <div >
       <div >
-      {questions.map((item, index) => (
-        <React.Fragment key={item.question}>
+      {questions && questions.map((item, index) => (
+        <React.Fragment key={index}>
           <div className={styles.center}>
           <button className={styles.styledButton} onClick={() => {
               handleButtonClick(item); 

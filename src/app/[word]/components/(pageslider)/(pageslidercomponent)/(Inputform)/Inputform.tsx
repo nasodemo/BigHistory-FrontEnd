@@ -46,8 +46,8 @@ const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
   };
 
   const handleSaveClick = async () => {
+    console.log('new question을 위한 handleSaveClick 돌아가는중')
     try {
-      console.log('new question을 위한 handleSaveClick 돌아가는중')
       const path = window.location.pathname.split('/');
       const word = decodeURI(path[1]);
       const server = process.env.NEXT_PUBLIC_SERVER_BASE_URL;
@@ -55,18 +55,16 @@ const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
       const tags = [selectedSight1, selectedSight2, selectedSight3];
       console.log('inputValue :', inputValue);
       await axios.post(server + instance, { word, question: inputValue, tags: tags });
-      return;
       // setquestions(response.data.questions);
+      console.log(inputVisible, ': handleSaveClick 다 돌아감');
+      setInputVisible(false);
+      setInputValue('');
+      setSelectedSight1(''); 
+      setSelectedSight2('');  
+      setSelectedSight3('');
     } catch (error: any) {
         console.error('error 발생 in handleSaveClick function')
     }
-
-
-    setInputVisible(false);
-    setInputValue('');
-    setSelectedSight1(''); 
-    setSelectedSight2('');  
-    setSelectedSight3('');  
   };
 
   const handleClearClick = () => {
@@ -106,7 +104,7 @@ const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
           <div className={styles.centerItems}>
             <div className={styles.sidetoside}>
             <select 
-                name='sight1' 
+                name='sight1'
                 className={styles.select} 
                 required
                 value={selectedSight1}

@@ -1,15 +1,15 @@
 import data from '../../../../public/data.json'
 import styles from './field.module.css'
 import {GiPlainCircle} from 'react-icons/gi'
-import userdata from '../../../../public/userdata.json'
+// import userdata from '../../../../public/userdata.json'
 import Uploadcommentshow from './(fieldcomponent)/(uploadcomment)/uploadcommentshow'
 import DataDescription from './(fieldcomponent)/dataDescription'
 
 export default function fieldpage(){
-    const comments=[
-        {username: userdata.user1.username, comment: userdata.user1.comment},
-        {username: userdata.user2.username, comment: userdata.user2.comment}
-    ]
+    // const comments=[
+    //     {username: userdata.user1.username, comment: userdata.user1.comment},
+    //     {username: userdata.user2.username, comment: userdata.user2.comment}
+    // ]
 
     return (
         <div>

@@ -3,10 +3,10 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "set PORT=80 && next dev",
+        "dev": "next dev",
         "build:dev": "env-cmd -f .env.development next build",
         "build:production": "env-cmd -f .env.production next build",
-        "start:dev": "set PORT=80 && env-cmd -f .env.development next start",
+        "start:dev": "env-cmd -f .env.development next start",
         "start:production": "env-cmd -f .env.production next start",
         "lint": "next lint"
     },

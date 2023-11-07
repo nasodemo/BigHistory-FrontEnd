@@ -28,13 +28,16 @@ function stringToJson(s: string) {
 export default function DataDescription() {
   const [descriptions, setdescriptions] = useState<Description[]>([]);
   const [message, setMessage] = useState<string | null>(null);
+  const [word, setWord] = useState<string | null>(null);
   const [catagory, setCatagory] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
   const pathname = usePathname();
   const handleSearch = async () => {
       try {
         // 아래의 코드는 뭔가 골치아픈데, 차후 해결해야할 문제임.
         const path = pathname.split('/')
         const word = decodeURI(path[1]);
+        setWord(word);
         const catagory = decodeURI(path[2]);
         setCatagory(catagory);
         console.log('word :', word, 'catagory :', catagory);
@@ -42,7 +45,9 @@ export default function DataDescription() {
         // backend call part
         const server = process.env.NEXT_PUBLIC_SERVER_BASE_URL;
         const instance = '/content/description'; 
+        setLoading(true);
         const response = await axios.post(server + instance, { word, catagory });
+        setLoading(false);
         console.log('response :', response.data);
         const refinedData = stringToJson(response.data);
         console.log(refinedData);
@@ -63,7 +68,13 @@ export default function DataDescription() {
     
     return (
       <div className={styles.container}>
-      <h2 className={styles.header}>{catagory}</h2>
+      <h2 className={styles.header}>{catagory} 관점에서 {word}에 대한 내용</h2>
+        {loading && (
+          <div className={styles.centerItems}>
+            <h3>Chat GPT가 {word}에 대해 {catagory} 내용을 만드는 중입니다...</h3>
+            <h4>+ GPT가 내용을 생성하기에 사실과 다르거나, 다른 학문 분야의 내용이 섞일 수 있습니다</h4>
+          </div>
+        )}
       {descriptions.map((item, index) => (
           <div key={index}>
               <h3 className={styles.title}>{item.title}</h3>
