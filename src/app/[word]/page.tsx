@@ -7,7 +7,7 @@ import DataSummery from './components/(datahandle)/dataSummery';
 
 
 export default function Lightmain() {
-    const check=data.check
+    const check=0
     return (
         <div>
             <br/>
