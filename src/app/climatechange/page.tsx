@@ -6,7 +6,7 @@ import data from '../../../public/data.json'
 
 
 export default function Lightmain() {
-    const check=0
+    const check=data.check
     return (
         <div>
             <br/>
