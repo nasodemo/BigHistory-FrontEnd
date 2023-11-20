@@ -58,7 +58,7 @@ export default function InputForm () {
       console.log('inputValue :', inputValue, 'tag :', tag );
       setLoading(1);
       setInputVisible(false);
-      const response = await axios.post(server + instance, { word, question: inputValue, tags: tags });
+      const response = await axios.post(server + instance, { word, question: inputValue, tag });
       // setquestions(response.data.questions);
       console.log(inputVisible, ': handleSaveClick 다 돌아감');
       setLoading(2);
