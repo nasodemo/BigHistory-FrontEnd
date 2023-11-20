@@ -25,6 +25,7 @@ const Pageslider: React.FC = () => {
     useEffect(() => {
       handleSearch();
     }, []);
+    
     const [currentslide, setcurrentslide] = useState<number>(0);
     const sliderRef = useRef<Slider | null>(null);  // Slider 타입 명시
 

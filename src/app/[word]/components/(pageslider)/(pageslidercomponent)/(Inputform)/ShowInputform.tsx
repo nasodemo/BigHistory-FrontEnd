@@ -53,13 +53,14 @@ export default function InputForm () {
       const word = decodeURI(path[1]);
       const server = process.env.NEXT_PUBLIC_SERVER_BASE_URL;
       const instance = '/questionRoutes/makequestions';
-      const tags = [selectedSight1, selectedSight2, selectedSight3];
-      console.error('inputValue :', inputValue);
+      let tags = [selectedSight1, selectedSight2, selectedSight3].filter((t) => t !== '');
+      let tag = tags.join('/');
+      console.log('inputValue :', inputValue, 'tag :', tag );
       setLoading(1);
       setInputVisible(false);
       const response = await axios.post(server + instance, { word, question: inputValue, tags: tags });
       // setquestions(response.data.questions);
-      console.error(inputVisible, ': handleSaveClick 다 돌아감');
+      console.log(inputVisible, ': handleSaveClick 다 돌아감');
       setLoading(2);
       setInputValue('');
       setSelectedSight1(''); 

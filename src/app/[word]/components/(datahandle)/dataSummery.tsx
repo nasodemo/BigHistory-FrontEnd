@@ -28,7 +28,6 @@ export default function DataSummery() {
     };
 
     useEffect(() => {
-        console.log('summery 작동 시작')
         handleSearch();
     }, []);
     // 수정

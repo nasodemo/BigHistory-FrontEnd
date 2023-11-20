@@ -52,9 +52,10 @@ const InputForm: React.FC<InputFormProps> = ({ onSave }) => {
       const word = decodeURI(path[1]);
       const server = process.env.NEXT_PUBLIC_SERVER_BASE_URL;
       const instance = '/questionRoutes/makequestions';
-      const tags = [selectedSight1, selectedSight2, selectedSight3];
-      console.log('inputValue :', inputValue);
-      await axios.post(server + instance, { word, question: inputValue, tags: tags });
+      let tags = [selectedSight1, selectedSight2, selectedSight3].filter((t) => t !== '');
+      let tag = tags.join('/');
+      console.log('inputValue :', inputValue, 'tag :', tag );
+      await axios.post(server + instance, { word, question: inputValue, tag: tag });
       // setquestions(response.data.questions);
       console.log(inputVisible, ': handleSaveClick 다 돌아감');
       setInputVisible(false);
