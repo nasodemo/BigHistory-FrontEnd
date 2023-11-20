@@ -92,18 +92,7 @@ const Uploadcomment: React.FC<UploadcommentProps> = ({ onSave }) => {
                     저장
                 </button>
                 </div>
-                &nbsp;      
-                <div>
-                    <button 
-                        type="button"
-                        title='delete'
-                        id='delete'
-                        onClick={handleClearClick}
-                        className={styles.deleteButtonStyle}
-                    >
-                    전체 삭제
-                </button>
-                </div>            
+                &nbsp;                 
             </div>
           </div>
         )}
