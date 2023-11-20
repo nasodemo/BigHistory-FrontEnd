@@ -47,19 +47,16 @@ export default function InputForm () {
   };
 
   const handleSaveClick = async () => {
-    // console.error('handleSaveClick 돌아가는중')
     try {
       const path = window.location.pathname.split('/');
       const word = decodeURI(path[1]);
       const server = process.env.NEXT_PUBLIC_SERVER_BASE_URL;
       const instance = '/questionRoutes/makequestions';
-      const tags = [selectedSight1, selectedSight2, selectedSight3];
-      console.error('inputValue :', inputValue);
+      const tag = [selectedSight1, selectedSight2, selectedSight3].filter((t) => t !== '');
+      // console.log('inputValue :', inputValue, '\n', 'tag :', tag);
       setLoading(1);
       setInputVisible(false);
-      const response = await axios.post(server + instance, { word, question: inputValue, tags: tags });
-      // setquestions(response.data.questions);
-      console.error(inputVisible, ': handleSaveClick 다 돌아감');
+      const response = await axios.post(server + instance, { word, question: inputValue, tag });
       setLoading(2);
       setInputValue('');
       setSelectedSight1(''); 
@@ -208,28 +205,3 @@ export default function InputForm () {
     </div>
   );
 };
-
-// 'use client'
-
-// import InputForm from "./Inputform";
-// import { useState } from "react";
-
-
-// const ShowInputform = () => {
-//     const [savedData, setSavedData] = useState<string>(''); // 'savedData' 타입 지정
-  
-//     const handleSave = (data: string) => { // 'data'의 타입을 'string'으로 지정
-//       setSavedData(data);
-//     };
-
-  
-//     return (
-//       <div>
-//         <br/> 
-//         <InputForm onSave={handleSave} />
-//         {savedData && <form id='saveddata'> {savedData} </form>}
-//       </div>
-//     );
-//   };
-  
-  // export default ShowInputform;
