@@ -89,7 +89,7 @@ const Uploadcomment: React.FC<UploadcommentProps> = ({ onSave }) => {
                     onClick={handleSaveClick}
                     className={styles.saveButtonStyle}
                 >
-                    저장
+                    댓글 저장
                 </button>
                 </div>
                 &nbsp;                 
