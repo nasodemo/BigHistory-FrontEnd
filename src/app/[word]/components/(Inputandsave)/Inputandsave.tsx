@@ -84,16 +84,7 @@ const Inputandsave: React.FC<InputandsaveProps> = ({ onSave }) => {
                     저장
                 </button>
                 </div>
-                &nbsp;
-                <div>
-                    <button 
-                        type="button"
-                        onClick={handleClearClick}
-                        className={styles.deleteButtonStyle}
-                    >
-                    전체 삭제
-                    </button>
-                </div>                
+                &nbsp;               
             </div>
           </div>
         )}
